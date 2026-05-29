@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DaKeBox // 个人工具箱</title>
+    <!-- Modern Tech Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Fira+Code:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/index.css" />
+  </head>
+  <body>
+    <div class="cyber-container">
+      <!-- High-tech Sci-fi Header -->
+      <header class="tech-header">
+        <div>
+          <h1 class="tech-title">DaKeBox // <span>个人工具箱</span></h1>
+        </div>
+        <div class="tech-stats">
+          <span>节点状态: 正常</span>
+          <span id="ping-metric">核心延迟: 12ms</span>
+          <span>主控模块: 激活</span>
+        </div>
+      </header>
+
+      <!-- Top Part: Bento Summary Grid of all tools -->
+      <section class="cyber-grid" id="tools-grid">
+        <!-- JSON Card -->
+        <div class="cyber-card tool-json active" data-tool="json">
+          <div class="card-header-group">
+            <div class="card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <span class="card-badge">格式化</span>
+          </div>
+          <h2 class="card-title">JSON 格式化</h2>
+          <p class="card-desc">对原始 JSON 数据结构进行格式化、验证和压缩，支持智能语法检查。</p>
+        </div>
+
+        <!-- Hash Card -->
+        <div class="cyber-card tool-hash" data-tool="hash">
+          <div class="card-header-group">
+            <div class="card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <span class="card-badge">加密编码</span>
+          </div>
+          <h2 class="card-title">密码哈希与 Base64</h2>
+          <p class="card-desc">安全计算 MD5 / SHA-256 哈希摘要，或进行 Base64 文本的双向编码与解码。</p>
+        </div>
+
+        <!-- Timestamp Card -->
+        <div class="cyber-card tool-timestamp" data-tool="timestamp">
+          <div class="card-header-group">
+            <div class="card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <span class="card-badge">时间转换</span>
+          </div>
+          <h2 class="card-title">UNIX 时间戳转换</h2>
+          <p class="card-desc">将 UNIX Epoch 时间戳与格式化的 UTC 日期时间字符串进行双向快速转换。</p>
+        </div>
+
+        <!-- Regex Card -->
+        <div class="cyber-card tool-regex" data-tool="regex">
+          <div class="card-header-group">
+            <div class="card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+            <span class="card-badge">正则解析</span>
+          </div>
+          <h2 class="card-title">正则表达式测试</h2>
+          <p class="card-desc">实时测试正则表达式，并可视化呈现捕获组的分段提取与匹配项标记高亮。</p>
+        </div>
+      </section>
+
+      <!-- Bottom Part: Workspace Detail Container -->
+      <section class="cyber-workspace tool-json" id="workspace-container">
+        <div class="energy-bar"></div>
+        <div id="tool-render-area">
+          <!-- Active tool component rendered reactively by JS -->
+        </div>
+      </section>
+
+      <!-- Persistent SQLite3 Log Feed -->
+      <section class="cyber-history-section">
+        <h4 class="history-title">实用工具最近运行流水账 (SQLite3 存储)</h4>
+        <div class="history-feed" id="history-feed-area">
+          <div class="history-empty">正在加载数据库历史流水...</div>
+        </div>
+      </section>
+
+      <!-- Sci-fi Footer -->
+      <footer class="cyber-footer">
+        <span>作者: 大可 (<a href="mailto:darkguo1217@gmail.com">darkguo1217@gmail.com</a>)</span>
+        <span>DaKeBox v1.0.0 // 版权所有 © 2026</span>
+      </footer>
+    </div>
+
+    <!-- Frontend reactive logic script -->
+    <script src="/static/index.js"></script>
+  </body>
+</html>

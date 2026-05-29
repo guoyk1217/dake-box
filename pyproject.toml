@@ -1,0 +1,18 @@
+[project]
+name = "dakebox"
+version = "1.0.0"
+description = "DaKeBox - Clean, premium, Python-only developer utilities suite"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.22.0",
+    "pydantic>=2.0",
+    "jinja2>=3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=7.0.0",
+    "httpx>=0.24.0",
+]
